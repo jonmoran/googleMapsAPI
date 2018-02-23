@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Basic Point Map</title>
+	<link rel="stylesheet" type="text/css" href="googleMaps.css">
+</head>
+<body>
+	<h3 style="text-align: center">The Maroon Bells</h3>
+    <img id="pic" src="maroonBells.jpg">
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var maroon = {lat: 39.096, lng: -106.949};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 8,
+          center: maroon
+        });
+        var marker = new google.maps.Marker({
+          position: maroon,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key= 
+AIzaSyA-L_zvIBT95k2kG0MUhFopm3DN-ECM-bw&callback=initMap">
+    </script>
+</body>
+</html>
